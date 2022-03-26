@@ -4,45 +4,46 @@
 # Дерево    - Tree
 # Ловушка   - Trap
 
-# Воин в состоянии защищаться от врагов, атаковать и передвигаться по полю
-# Лекарь может защищаться, лечить воина и панически спасаться бегством
-# Дерево может защищаться (попробуй разруби сходу) и гореть в огне
-# Ловушка не может ничего кроме как атаковать того, кто на нее наступит
 # Для решения этой задачи не используйте наследование
 
-class Obj:
-    ##
-    # тут представлено поведение четырех различных игровых объектов:
-    # - воина
-    # - лекаря
-    # - дерева
-    # - ловушки
 
+# Воин в состоянии защищаться от врагов, атаковать и передвигаться по полю
+class Warrior():
     def attack(self):
-        pass
+        print("Warrior attacks")
+
 
     def defense(self):
-        pass
+        print("Warrior defends!")
 
     def move(self):
-        pass
+        print("Warrior moves!")
 
-    def healer_defense(self):
-        pass
+# Лекарь может защищаться, лечить воина и панически спасаться бегством
+class Healer():
 
-    def healer_move(self):
-        pass
+    def defense(self):
+        print("Healer defends!")
+
+    def move(self):
+        print("Healer moves")
 
     def heal(self):
-        pass
+        print("Healer heals!")
 
-    def tree_defense(self):
-        pass
+# Дерево может защищаться (попробуй разруби сходу) и гореть в огне
+class Tree():
+
+    def defense(self):
+        print("Tree is unkillable!")
 
     def on_fire(self):
-        pass
+        print("Tree is being killed by fire!")
 
-    def trap_attack(self):
+# Ловушка не может ничего кроме как атаковать того, кто на нее наступит
+class Trap():
+
+    def attack(self):
         print("It's a trap!")
 
 if __name__ == '__main__':
